@@ -1,20 +1,20 @@
-<h1 align="center"><img height="40" src="https://github.com/Aquiles369/iconos/blob/main/img/lobo1.gif"><img height="40" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWx4YTl1dW9scXlqZDk2cTdyY2VvcXQwMG40OGoxY25rZzV0MDZhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/peSyJWjNTRfzaWh49M/giphy.gif">"Reloj Digital, horas con niveles"<img height="40" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWx4YTl1dW9scXlqZDk2cTdyY2VvcXQwMG40OGoxY25rZzV0MDZhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/peSyJWjNTRfzaWh49M/giphy.gif"><img height="35" src="https://github.com/Aquiles369/iconos/blob/main/img/lobo1.gif"> </h1>	
+<h1 align="center"><img height="40" src="https://github.com/Aquiles369/iconos/blob/main/img/lobo1.gif"><img height="40" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWx4YTl1dW9scXlqZDk2cTdyY2VvcXQwMG40OGoxY25rZzV0MDZhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/peSyJWjNTRfzaWh49M/giphy.gif">"Catálogo interactivo de códigos HTTP"<img height="40" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWx4YTl1dW9scXlqZDk2cTdyY2VvcXQwMG40OGoxY25rZzV0MDZhcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/peSyJWjNTRfzaWh49M/giphy.gif"><img height="35" src="https://github.com/Aquiles369/iconos/blob/main/img/lobo1.gif"> </h1>	
 
 
 <br>
 
 
 <p align="center">
- <img  height="470rem" alt="GIF" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWNzN294OXdkNGt1czVpbzk0eWFzc2FxdmF3aDJmbTR1cW1oNXdrYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/DNnmdXPatEvGlhvqsk/giphy.gif"/>
+ <img  height="470rem" alt="GIF" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdzem16djBobHlpMDFkdnZrMXIwaXRlNWZ2bDh0andmdTRpcTFxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eCFAF0F7fQfqHeliiE/giphy.gif"/>
 </p>
 
 <picture> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">  </picture>
 
- ### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBzcWFzcXZsdGNhN29rNjF5Z2JkbWdnNW40NXU1NHR0Z3lxNXN0cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kFBpX9YNpVg7X7jSVx/giphy.gif" width = 75px>  </picture> Reloj Digital
+ ### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNpcXkya3F1NGF3NWNxdDI2bzg0c3NzMmhuZWFlMHNsOGI3YmoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P4sS7sU2ufXz183cfy/giphy.gif" width = 75px>  </picture> Catálogo interactivo de códigos HTTP
 
 <br>
 
- **Pequeña app web para medir tu tiempo de práctica/juego. Permite iniciar/parar sesiones, muestra el total de horas acumuladas y la sesión actual en un reloj digital grande y claro. Todo persiste en localStorage. Incluye reinicio de progreso y 10 niveles de maestría: al alcanzar cada umbral de horas, se desbloquea con una animación  <a href="https://youtu.be/EzWE7fqrCVo" target="_blank" rel="noopener">Youtube</a>.** 
+ **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos ⭐ y notas 📝 con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar largo sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://youtu.be/EzWE7fqrCVo" target="_blank" rel="noopener">Youtube</a>.** 
 <br><br> 
 
 <p align="center">
