@@ -34,7 +34,7 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 
 • Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br><br>
 
-• Pasos a seguir:
+• Pasos a seguir:<br>
 
 • Descarga el repositorio.<br>
 
