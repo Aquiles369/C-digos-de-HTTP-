@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#0f1226">
+<title>Códigos HTTP — Catálogo rápido</title>
+<link rel="icon" href="fav_Aquiles.png" type="image/x-icon">
+<style>
+  :root{
+    --bg:#0f1226; --card:#161a38; --ink:#e7e9ff; --muted:#9aa3ff;
+    --accent:#7c5cff; --accent-2:#e00000; --line:rgba(255,255,255,.14);
+    --info:#00bcd4; --ok:#24d69a; --redir:#ffb703; --cli:#ff5c7c; --srv:#ff7849;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+    background:
+      radial-gradient(1200px 800px at 80% -10%, #1f2350 0%, transparent 60%),
+      radial-gradient(1000px 700px at -10% 110%, #1a1e45 0%, transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    display:grid; grid-template-columns:minmax(0,1fr); gap:14px; padding:16px 16px 80px;
+  }
+
+  /* Header flotante */
+  .head{
+    position:sticky; top:10px; z-index:50;
+    background:linear-gradient(180deg, rgba(22,26,56,.92), rgba(22,26,56,.72));
+    border:1px solid rgba(255,255,255,.08); border-radius:14px;
+    box-shadow:0 10px 24px rgba(0,0,0,.35);
+    display:flex; align-items:center; gap:10px; padding:12px;
+    backdrop-filter: blur(6px);
+  }
+  h1{margin:0; font-size:18px; font-weight:900; letter-spacing:.3px}
+  .search{flex:1; min-width:200px; padding:10px 12px; border-radius:10px; border:1px solid var(--line);
+    background:rgba(255,255,255,.06); color:var(--ink); font-weight:700}
+  .btn{
+    appearance:none; border:none; border-radius:10px; padding:8px 12px; font-weight:800; letter-spacing:.2px;
+    color:#0b0d1f; background:linear-gradient(90deg, var(--accent), var(--accent-2)); cursor:pointer;
+    box-shadow:0 6px 18px rgba(124,92,255,.30);
+  }
+  .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none}
+  .badge{font-size:12px; color:var(--muted)}
+
+  /* Tarjetas de tabla */
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.25); padding:10px; backdrop-filter:blur(6px);
+  }
+  .title{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    padding:8px 10px; border-radius:12px; margin:4px 2px 8px;
+    font-weight:900; letter-spacing:.4px;
+  }
+  .title .left{display:flex; align-items:center; gap:10px}
+  .pill{font-size:12px; color:#0b0d1f; background:#fff; padding:2px 8px; border-radius:999px; font-weight:900}
+
+  /* Tabla */
+  table{width:100%; border-collapse:separate; border-spacing:0}
+  thead th{position:sticky; top:62px; z-index:10; background:rgba(22,26,56,.96); color:var(--ink); border-bottom:1px solid var(--line)}
+  th,td{padding:10px; border-bottom:1px dashed var(--line); text-align:left; font-size:13px; vertical-align:top}
+  tbody tr:hover{background:rgba(255,255,255,.04)}
+  .code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight:900}
+  .tools{display:flex; gap:8px; flex-wrap:wrap}
+  .tool{
+    font-size:11px; font-weight:800; padding:4px 8px; border-radius:999px; border:1px solid var(--line);
+    color:var(--ink); background:rgba(255,255,255,.06); cursor:pointer
+  }
+  .tool.fav.active{background:gold; color:#111; border-color:#000}
+  .muted{color:var(--muted)}
+
+  /* Colores por categoría */
+  .c-1xx .title{background:linear-gradient(90deg, rgba(0,188,212,.35), rgba(255,255,255,.10)); border:1px dashed rgba(0,188,212,.35)}
+  .c-2xx .title{background:linear-gradient(90deg, rgba(36,214,154,.35), rgba(255,255,255,.10)); border:1px dashed rgba(36,214,154,.35)}
+  .c-3xx .title{background:linear-gradient(90deg, rgba(255,183,3,.35), rgba(255,255,255,.10));  border:1px dashed rgba(255,183,3,.35)}
+  .c-4xx .title{background:linear-gradient(90deg, rgba(255,92,124,.35), rgba(255,255,255,.10)); border:1px dashed rgba(255,92,124,.35)}
+  .c-5xx .title{background:linear-gradient(90deg, rgba(255,120,73,.35), rgba(255,255,255,.10));  border:1px dashed rgba(255,120,73,.35)}
+
+  /* Modal Notas */
+  .modal{position:fixed; inset:0; display:none; place-items:center; background:rgba(0,0,0,.55); backdrop-filter:blur(2px)}
+  .modal.open{display:grid}
+  .box{background:var(--card); border:1px solid rgba(255,255,255,.12); border-radius:16px; padding:16px; width:min(720px,100%)}
+  .box h3{margin:0 0 6px}
+  #noteArea{width:100%; min-height:220px; resize:vertical; background:rgba(255,255,255,.06); color:var(--ink);
+    border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:10px 12px; font-family:ui-monospace,Consolas,Menlo,monospace}
+  .actions{display:flex; gap:10px; justify-content:flex-end; margin-top:10px}
+  .counter{font-size:12px; color:var(--muted); margin-left:auto}
+  .collapse{cursor:pointer; font-size:12px; color:var(--ink); border:1px solid var(--line); background:transparent; border-radius:8px; padding:4px 8px}
+</style>
+</head>
+<body>
+  <!-- Header flotante -->
+  <div class="head">
+    <h1>⚡ Códigos HTTP</h1>
+    <input id="q" class="search" placeholder="Buscar por número o texto… ej: 302, Not Modified, redirección"/>
+    <button id="toggleFavs" class="btn ghost" title="Mostrar solo favoritos">⭐ Solo favoritos</button>
+    <span id="count" class="badge">0 resultados</span>
+    <button id="exp" class="btn ghost" title="Exportar notas y favoritos">Exportar JSON</button>
+    <button id="imp" class="btn" title="Importar JSON">Importar</button>
+    <input id="file" type="file" accept=".json" style="display:none"/>
+  </div>
+
+  <!-- Contenedores por categoría -->
+  <div id="wrap"></div>
+
+  <!-- Modal Notas -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="box">
+      <h3 id="noteTitle">📝 Notas</h3>
+      <p class="muted">Ctrl/Cmd + S guarda • Esc cierra</p>
+      <textarea id="noteArea" placeholder="Apuntes: falsos positivos, bypass, contexto…"></textarea>
+      <div class="actions">
+        <button id="saveNote" class="btn">Guardar (Ctrl+S)</button>
+        <button id="closeNote" class="btn ghost">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  const LS_KEY = 'aquiles_http_status_catalog_v1';
+
+  // ==== Datos (resumen curado de tu texto) ====
+  const DATA = [
+    // 1xx
+    {code:100, name:'Continue', cat:'1xx', desc:'Respuesta provisional: el cliente puede continuar.'},
+    {code:101, name:'Switching Protocols', cat:'1xx', desc:'Acepta el cambio indicado por Upgrade.'},
+    {code:102, name:'Processing (WebDAV)', cat:'1xx', desc:'Recibida y en proceso; sin respuesta aún.'},
+    {code:103, name:'Early Hints', cat:'1xx', desc:'Con Link; permite precargar recursos.'},
+
+    // 2xx
+    {code:200, name:'OK', cat:'2xx', desc:'Solicitud exitosa. GET=contenido; HEAD=encabezados; POST/PUT=representación del resultado; TRACE=eco.'},
+    {code:201, name:'Created', cat:'2xx', desc:'Exitoso, recurso creado (típico en PUT).'},
+    {code:202, name:'Accepted', cat:'2xx', desc:'Recibida pero aún no procesada; manejo asíncrono.'},
+    {code:203, name:'Non-Authoritative Information', cat:'2xx', desc:'Contenido desde copia/tercero; preferir 200 si es posible.'},
+    {code:204, name:'No Content', cat:'2xx', desc:'Éxito sin cuerpo; actualiza caché por headers.'},
+    {code:205, name:'Reset Content', cat:'2xx', desc:'Éxito; el UA debe reinicializar la página (ej. limpiar formularios).'},
+    {code:206, name:'Partial Content', cat:'2xx', desc:'Entrega parcial (descargas reanudables / rangos).'},
+    {code:207, name:'Multi-Status (WebDAV)', cat:'2xx', desc:'Respuesta multi-estado (XML) para varios recursos.'},
+    {code:208, name:'Already Reported (WebDAV)', cat:'2xx', desc:'Elementos DAV ya listados previamente.'},
+    {code:226, name:'IM Used', cat:'2xx', desc:'Representación con manipulaciones de instancia (Delta encoding).'},
+
+    // 3xx
+    {code:300, name:'Multiple Choices', cat:'3xx', desc:'Varias posibles respuestas; el UA debe elegir.'},
+    {code:301, name:'Moved Permanently', cat:'3xx', desc:'Recurso movido permanentemente (Location).'},
+    {code:302, name:'Found', cat:'3xx', desc:'Recurso movido temporalmente (usar misma URI).'},
+    {code:303, name:'See Other', cat:'3xx', desc:'Redirige a otro recurso mediante GET.'},
+    {code:304, name:'Not Modified', cat:'3xx', desc:'Caché: contenido no modificado.'},
+    {code:305, name:'Use Proxy (Obsoleto)', cat:'3xx', desc:'Obsoleto por seguridad.'},
+    {code:306, name:'Unused (Reservado)', cat:'3xx', desc:'Reservado; ya no se usa.'},
+    {code:307, name:'Temporary Redirect', cat:'3xx', desc:'Redirección temporal conservando el método.'},
+    {code:308, name:'Permanent Redirect', cat:'3xx', desc:'Redirección permanente conservando el método.'},
+
+    // 4xx
+    {code:400, name:'Bad Request', cat:'4xx', desc:'Sintaxis inválida.'},
+    {code:401, name:'Unauthorized', cat:'4xx', desc:'Requiere autenticación (distinto de 403).'},
+    {code:402, name:'Payment Required', cat:'4xx', desc:'Reservado para futuros usos (pagos).'},
+    {code:403, name:'Forbidden', cat:'4xx', desc:'Sin permisos para el contenido.'},
+    {code:404, name:'Not Found', cat:'4xx', desc:'Recurso no encontrado.'},
+    {code:405, name:'Method Not Allowed', cat:'4xx', desc:'Método conocido pero deshabilitado.'},
+    {code:406, name:'Not Acceptable', cat:'4xx', desc:'Negociación de contenido: no hay match.'},
+    {code:407, name:'Proxy Authentication Required', cat:'4xx', desc:'Autenticación mediante proxy requerida.'},
+    {code:408, name:'Request Timeout', cat:'4xx', desc:'Timeout de la solicitud / conexión inactiva.'},
+    {code:409, name:'Conflict', cat:'4xx', desc:'Conflicto con el estado actual del recurso.'},
+    {code:410, name:'Gone', cat:'4xx', desc:'Contenido eliminado permanentemente.'},
+    {code:411, name:'Length Required', cat:'4xx', desc:'Falta Content-Length requerido.'},
+    {code:412, name:'Precondition Failed', cat:'4xx', desc:'No se cumplen pre-condiciones del cliente.'},
+    {code:413, name:'Payload Too Large', cat:'4xx', desc:'Entidad mayor al límite; usar Retry-After.'},
+    {code:414, name:'URI Too Long', cat:'4xx', desc:'URI demasiado larga.'},
+    {code:415, name:'Unsupported Media Type', cat:'4xx', desc:'Formato no soportado.'},
+    {code:416, name:'Range Not Satisfiable', cat:'4xx', desc:'Rango fuera de tamaño del recurso.'},
+    {code:417, name:'Expectation Failed', cat:'4xx', desc:'No se cumple encabezado Expect.'},
+    {code:418, name:"I'm a teapot", cat:'4xx', desc:'RFC 2324: broma — no hago café ☕️.'},
+    {code:421, name:'Misdirected Request', cat:'4xx', desc:'Servidor no puede responder a esa autoridad/host.'},
+    {code:422, name:'Unprocessable Entity (WebDAV)', cat:'4xx', desc:'Bien formada pero errores semánticos.'},
+    {code:423, name:'Locked (WebDAV)', cat:'4xx', desc:'Recurso bloqueado.'},
+    {code:424, name:'Failed Dependency (WebDAV)', cat:'4xx', desc:'Falla por dependencia fallida.'},
+    {code:425, name:'Too Early', cat:'4xx', desc:'Rechaza solicitudes enviadas demasiado pronto (0-RTT en TLS).'},
+    {code:426, name:'Upgrade Required', cat:'4xx', desc:'Requiere cambiar de protocolo (Upgrade).'},
+    {code:428, name:'Precondition Required', cat:'4xx', desc:'Servidor exige solicitudes condicionales.'},
+    {code:429, name:'Too Many Requests', cat:'4xx', desc:'Demasiadas solicitudes — rate limit.'},
+    {code:431, name:'Request Header Fields Too Large', cat:'4xx', desc:'Encabezados demasiado grandes.'},
+    {code:451, name:'Unavailable For Legal Reasons', cat:'4xx', desc:'Censura / razones legales.'},
+
+    // 5xx
+    {code:500, name:'Internal Server Error', cat:'5xx', desc:'Error genérico del servidor.'},
+    {code:501, name:'Not Implemented', cat:'5xx', desc:'Método no soportado (GET/HEAD deben estar).'},
+    {code:502, name:'Bad Gateway', cat:'5xx', desc:'Gateway recibió respuesta inválida.'},
+    {code:503, name:'Service Unavailable', cat:'5xx', desc:'No listo (mantenimiento / sobrecarga). Retry-After.'},
+    {code:504, name:'Gateway Timeout', cat:'5xx', desc:'Gateway sin respuesta a tiempo.'},
+    {code:505, name:'HTTP Version Not Supported', cat:'5xx', desc:'Versión HTTP no soportada.'},
+    {code:506, name:'Variant Also Negotiates', cat:'5xx', desc:'Negociación produce referencia circular.'},
+    {code:507, name:'Insufficient Storage', cat:'5xx', desc:'Falta almacenamiento / configuración.'},
+    {code:508, name:'Loop Detected (WebDAV)', cat:'5xx', desc:'Bucle infinito detectado.'},
+    {code:510, name:'Not Extended', cat:'5xx', desc:'Requiere extensiones adicionales.'},
+    {code:511, name:'Network Authentication Required', cat:'5xx', desc:'Autenticación de red requerida (captive portal).'}
+    // 512–599: sin asignar/varios
+  
+    // === Extra no oficiales (no romper DATA) ===
+  ,{code:419, name:'Authentication Timeout', cat:'extra', desc:'Sesión expirada o autenticación caducada (Laravel, frameworks PHP).'},
+  {code:420, name:'Enhance Your Calm', cat:'extra', desc:'Rate limit especial usado por la API de Twitter (deprecated).'},
+  {code:430, name:'Request Header Fields Too Large (Shopify)', cat:'extra', desc:'Variante no estándar, similar al 431, visto en Shopify.'},
+  {code:444, name:'No Response', cat:'extra', desc:'Nginx: conexión cerrada sin enviar respuesta al cliente.'},
+  {code:449, name:'Retry With', cat:'extra', desc:'Microsoft/IIS: el cliente debe reintentar con cambios en la request.'},
+  {code:450, name:'Blocked by Windows Parental Controls', cat:'extra', desc:'Microsoft: acceso bloqueado por controles parentales.'},
+  {code:498, name:'Invalid Token', cat:'extra', desc:'Usado por APIs (ej. Esri): token de autenticación inválido.'},
+  {code:499, name:'Client Closed Request', cat:'extra', desc:'Nginx: el cliente cerró la conexión antes de que el servidor respondiera.'},
+  {code:509, name:'Bandwidth Limit Exceeded', cat:'extra', desc:'Hosting/cPanel: el sitio excedió el límite de ancho de banda asignado.'},
+  {code:520, name:'Web Server Returned an Unknown Error', cat:'extra', desc:'Cloudflare: error genérico desconocido del origen.'},
+  {code:521, name:'Web Server Is Down', cat:'extra', desc:'Cloudflare: el servidor origen rechazó la conexión.'},
+  {code:522, name:'Connection Timed Out', cat:'extra', desc:'Cloudflare: no se pudo completar la conexión con el origen.'},
+  {code:523, name:'Origin Is Unreachable', cat:'extra', desc:'Cloudflare: el origen no es alcanzable (DNS o red).'},
+  {code:524, name:'A Timeout Occurred', cat:'extra', desc:'Cloudflare: el origen aceptó la conexión pero tardó demasiado en responder.'},
+  {code:525, name:'SSL Handshake Failed', cat:'extra', desc:'Cloudflare: fallo en el handshake SSL con el origen.'},
+  {code:526, name:'Invalid SSL Certificate', cat:'extra', desc:'Cloudflare: certificado SSL inválido en el servidor origen.'},
+  {code:527, name:'Railgun Error', cat:'extra', desc:'Cloudflare: error interno en Railgun Listener.'},
+  {code:530, name:'Site Frozen', cat:'extra', desc:'Algunos hostings (Pantheon): sitio congelado por motivos administrativos.'},
+  {code:598, name:'Network Read Timeout', cat:'extra', desc:'Proxies/MS: timeout de lectura de red.'},
+  {code:599, name:'Network Connect Timeout Error', cat:'extra', desc:'Proxies/MS: timeout de conexión de red.'}
+
+
+
+  ];
+
+  // ==== Estado persistente ====
+  let store = load() || { favs:{}, notes:{} , onlyFavs:false, collapsed:{} };
+
+  function load(){
+    try{ return JSON.parse(localStorage.getItem(LS_KEY)); }catch{ return null; }
+  }
+  function save(){ localStorage.setItem(LS_KEY, JSON.stringify(store)); }
+
+  // ==== Render ====
+  const $wrap = document.getElementById('wrap');
+  const $q = document.getElementById('q');
+  const $count = document.getElementById('count');
+  const $toggleFavs = document.getElementById('toggleFavs');
+
+  const CATS = [
+    {key:'1xx', label:'Respuestas informativas', cls:'c-1xx'},
+    {key:'2xx', label:'Respuestas satisfactorias', cls:'c-2xx'},
+    {key:'3xx', label:'Redirecciones', cls:'c-3xx'},
+    {key:'4xx', label:'Errores de cliente', cls:'c-4xx'},
+    {key:'5xx', label:'Errores de servidor', cls:'c-5xx'},
+    {key:'extra', label:'No oficiales (extra)', cls:'c-5xx'},
+  ];
+
+  function render(){
+    $wrap.innerHTML = '';
+    const q = ($q.value||'').trim().toLowerCase();
+    let total = 0;
+
+    CATS.forEach(cat=>{
+      const card = document.createElement('div'); card.className = `card ${cat.cls}`;
+      const head = document.createElement('div'); head.className='title';
+      head.innerHTML = `
+        <div class="left">
+          <span>${cat.label}</span>
+          <span class="pill">${cat.key}</span>
+        </div>
+        <button class="collapse">${store.collapsed[cat.key] ? 'Mostrar' : 'Ocultar'}</button>
+      `;
+      const btnCol = head.querySelector('.collapse');
+      btnCol.addEventListener('click', ()=>{
+        store.collapsed[cat.key] = !store.collapsed[cat.key]; save(); render();
+      });
+      card.appendChild(head);
+
+      const table = document.createElement('table');
+      table.innerHTML = `
+        <thead>
+          <tr><th style="width:100px">Código</th><th style="width:240px">Nombre</th><th>Descripción</th><th style="width:180px">Acciones</th></tr>
+        </thead>
+        <tbody></tbody>
+      `;
+      const tb = table.querySelector('tbody');
+
+      if (!store.collapsed[cat.key]){
+        DATA.filter(d => d.cat===cat.key).forEach(row=>{
+          const flat = `${row.code} ${row.name} ${row.desc}`.toLowerCase();
+          const matchesQuery = !q || flat.includes(q);
+          const matchesFavs = !store.onlyFavs || store.favs[row.code];
+          if (matchesQuery && matchesFavs){
+            total++;
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td class="code">${row.code}</td>
+              <td><b>${row.name}</b></td>
+              <td>${row.desc}</td>
+              <td>
+                <div class="tools">
+                  <button class="tool copy">Copiar ${row.code}</button>
+                  <button class="tool note">Notas</button>
+                  <button class="tool fav ${store.favs[row.code]?'active':''}">⭐ Favorito</button>
+                </div>
+              </td>
+            `;
+            // acciones
+            tr.querySelector('.copy').addEventListener('click', async ()=>{
+              try { await navigator.clipboard.writeText(String(row.code)); tr.querySelector('.copy').textContent='¡Copiado!'; setTimeout(()=>tr.querySelector('.copy').textContent=`Copiar ${row.code}`,900); } catch {}
+            });
+            tr.querySelector('.note').addEventListener('click', ()=> openNotes(row));
+            tr.querySelector('.fav').addEventListener('click', (e)=>{
+              store.favs[row.code] = !store.favs[row.code]; save(); e.currentTarget.classList.toggle('active'); updateCount();
+            });
+
+            tb.appendChild(tr);
+          }
+        });
+      }
+
+      card.appendChild(table);
+      $wrap.appendChild(card);
+    });
+
+    updateCount(total);
+  }
+
+  function updateCount(n){
+    if (typeof n!=='number'){
+      const q = ($q.value||'').trim().toLowerCase();
+      const onlyFavs = store.onlyFavs;
+      n = DATA.filter(d=>{
+        const flat = `${d.code} ${d.name} ${d.desc}`.toLowerCase();
+        return (!q || flat.includes(q)) && (!onlyFavs || store.favs[d.code]);
+      }).length;
+    }
+    $count.textContent = `${n} resultado${n===1?'':'s'}`;
+  }
+
+  // ==== Notas modal ====
+  const $modal = document.getElementById('modal');
+  const $noteTitle = document.getElementById('noteTitle');
+  const $noteArea = document.getElementById('noteArea');
+  const $saveNote = document.getElementById('saveNote');
+  const $closeNote = document.getElementById('closeNote');
+  let currentCode = null;
+
+  function openNotes(row){
+    currentCode = row.code;
+    $noteTitle.textContent = `📝 Notas — ${row.code} ${row.name}`;
+    $noteArea.value = store.notes[row.code] || '';
+    $modal.classList.add('open'); $noteArea.focus();
+  }
+  function closeNotes(){ $modal.classList.remove('open'); currentCode=null; }
+  function saveNotes(){ if(currentCode!=null){ store.notes[currentCode] = $noteArea.value.trim(); save(); closeNotes(); } }
+  $saveNote.addEventListener('click', saveNotes);
+  $closeNote.addEventListener('click', closeNotes);
+  window.addEventListener('keydown', e=>{
+    if($modal.classList.contains('open')){
+      if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='s'){ e.preventDefault(); saveNotes(); }
+      if(e.key==='Escape'){ e.preventDefault(); closeNotes(); }
+    }
+  });
+
+  // ==== Búsqueda / Filtros / Import-Export ====
+  $q.addEventListener('input', render);
+  $toggleFavs.addEventListener('click', ()=>{
+    store.onlyFavs = !store.onlyFavs; save();
+    $toggleFavs.textContent = store.onlyFavs ? '⭐ Mostrando favoritos' : '⭐ Solo favoritos';
+    $toggleFavs.classList.toggle('ghost', !store.onlyFavs);
+    render();
+  });
+
+  // Exportar/Importar
+  document.getElementById('exp').addEventListener('click', ()=>{
+    const payload = JSON.stringify({favs:store.favs, notes:store.notes, collapsed:store.collapsed}, null, 2);
+    const blob = new Blob([payload], {type:'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'http_catalog_prefs.json'; a.click();
+  });
+  const $file = document.getElementById('file');
+  document.getElementById('imp').addEventListener('click', ()=> $file.click());
+  $file.addEventListener('change', async e=>{
+    const f = e.target.files[0]; if(!f) return;
+    try{
+      const txt = await f.text();
+      const obj = JSON.parse(txt);
+      store.favs = obj.favs || {};
+      store.notes = obj.notes || {};
+      store.collapsed = obj.collapsed || {};
+      save(); render();
+    }catch{ alert('JSON inválido'); }
+    e.target.value='';
+  });
+
+  // ==== Init ====
+  render();
+})();
+</script>
+</body>
+</html>
