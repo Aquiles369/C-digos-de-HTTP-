@@ -36,9 +36,11 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 
 • Pasos a seguir:<br>
 
-• Descarga el repositorio.<br>
-• Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
-• Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
+• Descarga el repositorio.<br><br>
+
+• Abra el archivo Estados_servidor.html en con su navegador preferido.<br><br>
+
+• Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br><br>
 
 <br>
 
