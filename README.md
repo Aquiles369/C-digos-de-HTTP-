@@ -35,12 +35,9 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 • Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br><br>
 
 • Pasos a seguir:<br>
-
-• Descarga el repositorio.<br>
-
-• Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
-
-• Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
+1. Descarga el repositorio.<br>
+2. Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
+3. Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
 
 <br>
 
