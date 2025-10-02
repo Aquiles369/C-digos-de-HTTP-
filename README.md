@@ -14,7 +14,7 @@
 
 <br>
 
- **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos ⭐ y notas 📝 con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar largo sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://youtu.be/EzWE7fqrCVo" target="_blank" rel="noopener">Youtube</a>.** 
+ **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos  y notas  con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar largo sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://youtu.be/EzWE7fqrCVo" target="_blank" rel="noopener">Youtube</a>.** 
 <br><br> 
 
 <p align="center">
@@ -26,10 +26,11 @@
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3J4bThxOTg5ZDcwZmJ3YWwydHBib21qdm10eTVneWdzYnI2bnljNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WtCI35wqBt1bvKPXXq/giphy.gif" width = 80px>  </picture> Resumen rápido
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczVrcnhwNDAzajJmMWhrN3p3OGg2b3B0emRoOGFlMnNlNm04Y2I3dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/nndsQSOMEUToRELiAE/giphy.gif" width = 80px>  </picture> Resumen rápido
 <br><br>
 
-Pequeña app web para medir tu tiempo de práctica/juego. Permite iniciar/parar sesiones, muestra el total de horas acumuladas y la sesión actual en un reloj digital grande y claro. Todo persiste en localStorage. Incluye reinicio de progreso y 10 niveles de maestría: al alcanzar cada umbral de horas, se desbloquea con una animación.
+Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye todos los oficiales 1xx–5xx (con 425 Too Early) + ~20 “extra” no oficiales (Cloudflare).<br>
+
 
 • Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br>
 
@@ -37,49 +38,54 @@ Pequeña app web para medir tu tiempo de práctica/juego. Permite iniciar/parar 
 
 1- Descarga el repositorio.<br>
 2- Abra el archivo contador.html en con su navegador preferido.<br>
+3- Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
 
 <br>
 
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGxoMTM0bnZmajEwbDJ0cG1waDJ1djRjd3VnbzlzZmZ2OGNjY2VpNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dW5tjQQH1J79Fxaq2x/giphy.gif" width = 80px>  </picture> Características
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXB5c2oxYnBwdGJpc3hhejl1c3Jzc3cyZTlzOWQ4a2N4dGx4eWdjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vYBtBiaNcZF3F3Iaip/giphy.gif" width = 80px>  </picture> Características
 <br><br>
 
 
-• Iniciar / Parar con botones y atajos (S para iniciar, P para parar).
+• Iniciar / Parar con botones y atajos (S = iniciar, P = parar).
 
-• Contador de sesión actual + total histórico.
+• Buscador por categoría y texto: filtra códigos por categoría (1xx, 2xx, 3xx, 4xx, 5xx y extra).
 
 • Persistencia local (sin backend) vía localStorage.
 
-• Botón para reiniciar todo el progreso.
+• Ctrl + F (búsqueda rápida): si presionás Ctrl+F e ingresás un código (ej.: 302), el navegador te lleva a la sección/parte donde se describe ese código.
 
-• 10 niveles de maestría (10h → 10.000h), con indicador de progreso y estado desbloqueado.
+• Buscador interno: el campo de búsqueda de la app permite encontrar por número, nombre o descripción y navegar directamente al resultado.
 
-• UI oscura, minimalista y centrada en la legibilidad.
+• Notas por código: cada código HTTP tiene su panel de notas editable (guardar, editar, eliminar); se muestra la última modificación.
+
+• Ocultar/mostrar categorías: podés ocultar categorías completas; recomendado no ocultarlas porque Ctrl+F del navegador no buscará dentro de secciones colapsadas — sí podés usar el buscador interno.
+
+• Favoritos: agrega códigos a “Mis favoritos” para filtrar ruido visual y quedarte solo con lo que te interesa.
+
+• Importar / Exportar: exportá e importá preferencias, favoritos y notas en un JSON (ej.: importa.json).
+
+• Cobertura: incluye todos los códigos HTTP oficiales (1xx–5xx, incluyendo 425 Too Early) y ~20 códigos extra/no oficiales (Cloudflare, Nginx, cPanel, frameworks, etc.) que se usan en la vida real.
 
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjhwc25oem95d2FqcGhuNzU4bmZ5NzF0NHh2NHdibnltOGUwZHV2OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/lQONRuxQAjGnXTeQKA/giphy.gif" width = 80px>  </picture> Uso
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGdlNnJtczFndjRkZXczMXR0MmRvMHJteXJmMG5hOWN3djdzcmhqYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/DY4GxWN6Ml3oVexySy/giphy.gif" width = 80px>  </picture> Uso
 <br><br>
 
 
-• Inicia con Iniciar (o tecla S).
+• Búsqueda de códigos HTTP: primero ingrese el código HTTP que le devolvió el servidor (ej.: 429) en el buscador interno, o use Ctrl + F para que el navegador lo lleve a la sección donde se describe ese código.
 
-• Detén con Parar (o tecla P).
-
-• Observa el total y la sesión; cierra y vuelve cuando quieras: los datos quedan guardados.
-
-• Al cumplir cada hito de horas, se activa su nivel con animación.
+• Uso simple y minimalista: diseñado para que cualquiera lo pueda usar sin complicaciones.
  
  <br>
 
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjE1cm1nZTczYzBlZHVtcjFmdDc3c2k1ZzlvbGZsaTBod2hrbngyZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/J5jIarVcz2ovuI7kYb/giphy.gif" width = 80px>  </picture> Perfecto para trackear práctica, estudio o grind diario. Minimalista, adictivo y sin excusas.
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3YwbG9zbmU1amprdTJsbmxzYnpobzd5eGtnazB6b2FmdnllaTRhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/h8UlsEpqiCISTKUzvz/giphy.gif" width = 80px>  </picture> "Buscar rápido: escribe el código HTTP (ej.: 429) en el buscador para saltar instantáneamente a su descripción completa — incluye todos los códigos (oficiales y no oficiales, incluso los menos conocidos) en un único lugar."
 <br>
 
 
