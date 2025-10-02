@@ -18,7 +18,7 @@
 <br><br> 
 
 <p align="center">
- <img  height="420rem" alt="GIF" src="https://github.com/Aquiles369/iconos/blob/main/demo_reloj.gif"/>
+ <img  height="420rem" alt="GIF" src="https://github.com/Aquiles369/iconos/blob/main/demo_codigos_http.gif"/>
 </p>
 
 <br>
@@ -37,7 +37,7 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 • Pasos a seguir:<br><br> 
 
 1- Descarga el repositorio.<br>
-2- Abra el archivo contador.html en con su navegador preferido.<br>
+2- Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
 3- Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
 
 <br>
