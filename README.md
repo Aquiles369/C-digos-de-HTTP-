@@ -32,13 +32,13 @@
 Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye todos los oficiales 1xx–5xx (con 425 Too Early) + ~20 “extra” no oficiales (Cloudflare).<br>
 
 
-• Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br>
+• Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br><br>
 
-• Pasos a seguir:<br><br> 
+• Pasos a seguir:<br>
 
-1- Descarga el repositorio.<br>
-2- Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
-3- Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
+• Descarga el repositorio.<br>
+• Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
+• Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
 
 <br>
 
