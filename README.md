@@ -11,6 +11,20 @@
 <picture> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">  </picture>
 
 
+### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNpcXkya3F1NGF3NWNxdDI2bzg0c3NzMmhuZWFlMHNsOGI3YmoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P4sS7sU2ufXz183cfy/giphy.gif" width = 75px>  </picture> Catálogo interactivo de códigos HTTP
+
+<br>
+
+ **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos  y notas  con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
+<br><br> 
+
+<p align="center">
+ <img  height="420rem" alt="GIF" src="https://github.com/Aquiles369/iconos/blob/main/demo_codigos_http.gif"/>
+</p>
+
+<br>
+
+
 ### <picture> <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjExOWp1d25mbDh2YnJhdHJ6OHdlZXhoNGZmdmtlb2F3NnlhcWs0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Ha2DszQVpjI1AxvW5h/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
 **Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.<br><br>
 • El problema es que la mayoría de las veces:<br><br>
@@ -31,18 +45,6 @@
 
 <br>
 
- ### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNpcXkya3F1NGF3NWNxdDI2bzg0c3NzMmhuZWFlMHNsOGI3YmoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P4sS7sU2ufXz183cfy/giphy.gif" width = 75px>  </picture> Catálogo interactivo de códigos HTTP
-
-<br>
-
- **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos  y notas  con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
-<br><br> 
-
-<p align="center">
- <img  height="420rem" alt="GIF" src="https://github.com/Aquiles369/iconos/blob/main/demo_codigos_http.gif"/>
-</p>
-
-<br>
 
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
