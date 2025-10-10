@@ -11,12 +11,12 @@
 <picture> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">  </picture>
 
 
-### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExengxYjI2cmVpaWtzNTRoZDNheDRhamdraTg2ZXF6M2dieDBxOXYwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Vey3HIfx4EbAnioUmr/giphy.gif" width = 75px>  </picture> Problema que resuelve<br>
-**Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.
-• El problema es que la mayoría de las veces:<br>
-• Tenés que buscar cada código en Google manualmente.<br>
-• Las respuestas “extra” (Cloudflare, Nginx, cPanel, etc.) ni siquiera están documentadas en la RFC.<br>
-• No podés guardar notas ni organizar la información relevante.<br>
+### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExengxYjI2cmVpaWtzNTRoZDNheDRhamdraTg2ZXF6M2dieDBxOXYwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Vey3HIfx4EbAnioUmr/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
+**Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.<br><br>
+• El problema es que la mayoría de las veces:<br><br>
+• Tenés que buscar cada código en Google manualmente.<br><br>
+• Las respuestas “extra” (Cloudflare, Nginx, cPanel, etc.) ni siquiera están documentadas en la RFC.<br><br>
+• No podés guardar notas ni organizar la información relevante.<br><br>
 • Esta herramienta elimina ese cuello de botella: centraliza todos los códigos HTTP oficiales y no oficiales en un solo lugar, accesibles en segundos, con buscador instantáneo, notas, favoritos y exportación de preferencias. Así, pasás menos tiempo buscando y más tiempo analizando.</a>.** 
 
 <br>
