@@ -11,7 +11,7 @@
 <picture> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">  </picture>
 
 
-### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExengxYjI2cmVpaWtzNTRoZDNheDRhamdraTg2ZXF6M2dieDBxOXYwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Vey3HIfx4EbAnioUmr/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
+### <picture> <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjExOWp1d25mbDh2YnJhdHJ6OHdlZXhoNGZmdmtlb2F3NnlhcWs0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Ha2DszQVpjI1AxvW5h/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
 **Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.<br><br>
 • El problema es que la mayoría de las veces:<br><br>
 • Tenés que buscar cada código en Google manualmente.<br><br>
@@ -21,12 +21,13 @@
 
 <br>
 
-### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmpwejdiem9wNWtwMnRwOWJrcXV1MjBia2doeHI3YzhwZGpham4zYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ahIeS0wEoqxjqxkZeI/giphy.gif" width = 75px>  </picture> Qué aporta y cómo beneficia <br><br>
-**• Recon instantáneo – Al tener todos los dorks en un solo lugar, podés buscar vulnerabilidades comunes (backups expuestos, paneles de admin, errores, claves filtradas, etc.) en segundos sin tener que recordar consultas manualmente.<br><br>
-• Automatización parcial – La interfaz permite lanzar múltiples dorks a la vez contra un dominio con control de velocidad, ideal para usar como fase previa a herramientas más potentes como Burp, httpx o tus scripts personalizados.<br><br>
-• Gestión completa – Podés crear, editar, eliminar o agrupar dorks por categorías y etiquetas, agregar notas, versionar tus colecciones y exportarlas en JSON para compartirlas o usarlas en otros proyectos.<br><br>
-• Flujo profesional – Todo se ejecuta offline y localmente en tu navegador, sin dependencias externas. Perfecto para laboratorios o entornos restringidos. Además, al no hacer explotación ni rastreo automático, es seguro y legal como herramienta de análisis pasivo.<br><br>
-• Productividad brutal – Centralizar y organizar más de 47 categorías de dorks reduce horas de trabajo en la fase de recon y aumenta las chances de descubrir vectores interesantes al inicio de una auditoría.</a>.** 
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnJ1Z2xlanAxMHM2bWZ2djM3Y3h5cTZleHA0cGJ2bmpmMXRucjlweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/lHXsw5hwW0UAnSdHAH/giphy.gif" width = 75px>  </picture> Qué aporta y cómo beneficia <br><br>
+**• Conocimiento completo en segundos: reúne todos los códigos oficiales (1xx–5xx) y más de 20 códigos “extra” reales utilizados por proveedores como Cloudflare, Nginx o cPanel, incluso los menos conocidos como 425 Too Early. Esto te evita perder tiempo buscando documentación dispersa y te da acceso inmediato a toda la información relevante.<br><br>
+• Aceleración de tu flujo de trabajo: el buscador interno y el soporte para Ctrl + F permiten saltar al instante al código que necesitás analizar, por número, nombre o descripción. Esto agiliza la toma de decisiones y te hace avanzar mucho más rápido en las fases de recon y explotación.<br><br>
+• Mejor contexto y decisiones más inteligentes: entender en segundos qué significa un estado HTTP te da una ventaja táctica: sabés si un endpoint redirige, si hay filtrado activo, si la respuesta proviene de un proxy intermedio o si revela detalles del backend. Esa información puede marcar la diferencia entre un hallazgo superficial y una vulnerabilidad crítica.<br><br>
+• Documentación personalizada sin esfuerzo: cada código tiene un panel de notas editable para agregar observaciones, comportamientos específicos que encontraste o pasos a seguir. Además, podés marcar favoritos y exportar todo como JSON, creando tu propia base de conocimiento reutilizable.<br><br>
+• Uso local, simple y sin dependencias: al funcionar completamente en tu navegador con localStorage, no necesita backend ni conexión. Esto lo hace ideal para laboratorios, entornos aislados o auditorías sin acceso a internet, manteniendo tus datos bajo control total.<br><br>
+• Más foco en la explotación: al tener toda la información centralizada y accesible de inmediato, eliminás el tiempo perdido en búsquedas externas y podés concentrarte en lo que realmente importa: analizar, explotar y reportar vulnerabilidades.</a>.** 
 
 <br>
 
