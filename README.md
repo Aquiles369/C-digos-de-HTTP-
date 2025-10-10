@@ -10,18 +10,14 @@
 
 <picture> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">  </picture>
 
- ### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNpcXkya3F1NGF3NWNxdDI2bzg0c3NzMmhuZWFlMHNsOGI3YmoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P4sS7sU2ufXz183cfy/giphy.gif" width = 75px>  </picture> Catálogo interactivo de códigos HTTP
 
-<br>
-
- **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos  y notas  con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
-<br><br> 
-
-### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExengxYjI2cmVpaWtzNTRoZDNheDRhamdraTg2ZXF6M2dieDBxOXYwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Vey3HIfx4EbAnioUmr/giphy.gif" width = 75px>  </picture> Problema que resuelve
-<br>
-
-**Cuando haces reconocimiento en bug bounty o pentesting, uno de los pasos más lentos y tediosos es buscar manualmente dorks útiles de Google, clasificarlos por tipo mantenerlos actualizados y probarlos contra un objetivo.Normalmente hay que abrir muchas pestañas, copiar/pegar consultas, y repetir tareas una y otra vez.<br><br>
-• Esta herramienta elimina ese dolor de cabeza: centraliza más de 12.000 dorks ya listos, bien categorizados y filtrables, para que puedas enfocarte en la investigación en lugar de perder tiempo con tareas repetitivas</a>.** 
+### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExengxYjI2cmVpaWtzNTRoZDNheDRhamdraTg2ZXF6M2dieDBxOXYwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Vey3HIfx4EbAnioUmr/giphy.gif" width = 75px>  </picture> Problema que resuelve<br>
+**Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.
+• El problema es que la mayoría de las veces:<br>
+• Tenés que buscar cada código en Google manualmente.<br>
+• Las respuestas “extra” (Cloudflare, Nginx, cPanel, etc.) ni siquiera están documentadas en la RFC.<br>
+• No podés guardar notas ni organizar la información relevante.<br>
+• Esta herramienta elimina ese cuello de botella: centraliza todos los códigos HTTP oficiales y no oficiales en un solo lugar, accesibles en segundos, con buscador instantáneo, notas, favoritos y exportación de preferencias. Así, pasás menos tiempo buscando y más tiempo analizando.</a>.** 
 
 <br>
 
@@ -33,6 +29,13 @@
 • Productividad brutal – Centralizar y organizar más de 47 categorías de dorks reduce horas de trabajo en la fase de recon y aumenta las chances de descubrir vectores interesantes al inicio de una auditoría.</a>.** 
 
 <br>
+
+ ### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNpcXkya3F1NGF3NWNxdDI2bzg0c3NzMmhuZWFlMHNsOGI3YmoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P4sS7sU2ufXz183cfy/giphy.gif" width = 75px>  </picture> Catálogo interactivo de códigos HTTP
+
+<br>
+
+ **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos  y notas  con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
+<br><br> 
 
 <p align="center">
  <img  height="420rem" alt="GIF" src="https://github.com/Aquiles369/iconos/blob/main/demo_codigos_http.gif"/>
